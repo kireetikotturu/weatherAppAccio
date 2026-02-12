@@ -1,0 +1,114 @@
+.weather-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0 15px;
+}
+
+.weather-card {
+    background: linear-gradient(135deg, #3d0f7d, #4f4187);
+    width: 360px;
+    border-radius: 20px;
+    padding: 20px 15px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    position: relative;   /* ADD THIS */
+}
+
+
+.weather-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Temperature */
+.weather-temp-c {
+    font-size: 52px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 8px;
+}
+
+/* Weather condition text */
+.weather-condition {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+/* Humidity & Cloud container */
+.weather-info {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+/* Small info pills */
+.humidity-data,
+.cloud-data {
+    background: #f1f5f9;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.humidity-data:hover,
+.cloud-data:hover {
+    background: #e2e8f0;
+    transform: translateY(-3px);
+}
+
+/* Location text */
+.weather-place {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 10px;
+    color: white;
+}
+
+/* Weather icon */
+.weather-avatar {
+    position: absolute;
+    top: -45px;
+    right: -35px;
+}
+.weather-avatar img {
+    width: 120px;
+    background: transparent;
+    border-radius: 50%;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.weather-avatar img:hover {
+    transform: scale(1.1) rotate(8deg);
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .weather-card {
+        width: 100%;
+        padding: 25px 20px;
+    }
+
+    .weather-temp-c {
+        font-size: 42px;
+    }
+
+    .weather-info {
+        gap: 10px;
+    }
+}

@@ -1,0 +1,42 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+  color: white;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+/* SVG container */
+.svg-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* SVG styling */
+.svg {
+  width: 32px;
+  height: 32px;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.header:hover .svg {
+  transform: rotate(15deg) scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .header {
+    font-size: 20px;
+  }
+
+  .svg {
+    width: 26px;
+    height: 26px;
+  }
+}
